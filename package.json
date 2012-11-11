@@ -1,0 +1,17 @@
+{
+  "name": "promises",
+  "version": "0.0.0",
+  "description": "A small Promises/A+ implementation",
+  "main": "index.js",
+  "repository": "",
+  "author": "Ville Immonen",
+  "license": "MIT",
+  "devDependencies": {
+    "jshint": "~1.0.0",
+    "promises-aplus-tests": "git://github.com/promises-aplus/promises-tests.git"
+  },
+  "scripts": {
+    "lint": "jshint"
+    "test": "promises-aplus-tests test/adapter"
+  }
+}
