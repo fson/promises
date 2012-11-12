@@ -1,28 +1,18 @@
 'use strict';
 
-var defer = require('../index').defer;
+var promises = require('../index');
 
 /**
  * Creates a promise that is already fulfilled with value.
  */
-exports.fulfilled = function (value) {
-  var deferred = defer();
-  deferred.fulfill(value);
-  return deferred.promise;
-};
+exports.fulfilled = promises.fulfilled;
 
 /**
- * creates a promise that is already rejected with reason.
+ * Creates a promise that is already rejected with reason.
  */
-exports.rejected = function (reason) {
-  var deferred = defer();
-  deferred.reject(reason);
-  return deferred.promise;
-};
+exports.rejected = promises.rejected;
 
 /**
- * Creates a promise that is already fulfilled with value.
+ * Creates a tuple consisting of { promise, fulfill, reject }.
  */
-exports.pending = function () {
-  return [];
-};
+exports.pending = promises.defer;
